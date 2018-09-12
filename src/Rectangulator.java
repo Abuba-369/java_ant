@@ -1,4 +1,4 @@
-c class Rectangulator {
+ class Rectangulator {
 
   public static void main(String[] args) {
 
