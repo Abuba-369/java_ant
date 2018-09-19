@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
-
 <project name="Rectangle-Build" default="main" basedir=".">
-
   <property environment="env"/>
 
  
@@ -19,8 +17,8 @@
  
 
   <path id="class.path">
-
-    <pathelement location="./bin" />
+    <pathelement location="./lib/junit-4.12-yb-1.jar" />
+    <pathelement location="${build.dir}" />
 
    </path>
 
@@ -58,9 +56,15 @@
 
   <target name="compile" depends="clean, makedir">
 
-    <javac srcdir="${src.dir}" destdir="${build.dir}">
-
+    <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="true">
+ 
+  
       <classpath refid="class.path" />
+    
+    
+  
+   
+   
 
     </javac>
 
